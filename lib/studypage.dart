@@ -71,22 +71,95 @@ class _StudyPageState extends State<StudyPage> {
         children: <Widget>[
           Align(
             alignment: Alignment.bottomLeft,
-            child: FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.navigate_before),
+            child: Container(
+              height: 70,
+              width: 70,
+              margin: const EdgeInsets.only(bottom: 40, left: 20),
+              child: FloatingActionButton(
+                onPressed: () {},
+                child: Icon(Icons.navigate_before, size: 40,),
+              ),
             ),
           ),
           Align(
             alignment: Alignment.bottomRight,
-            child: FloatingActionButton(
-              onPressed: () {},
-              child: Icon(Icons.navigate_next),
+            child: Container(
+              height: 70,
+              width: 70,
+              margin: const EdgeInsets.only(bottom: 40, right: 20),
+              child: FloatingActionButton(
+                onPressed: () {},
+                child: Icon(Icons.navigate_next, size: 40,),
+              ),
             ),
+          ),
+          Align(
+              alignment: Alignment.center,
+              child:  SizedBox(
+                width: 260,
+                height: 260,
+                child: Container(
+                  decoration : BoxDecoration(
+                    border : Border.all(color: Colors.black),
+                    color: Colors.white,
+                  ),
+                  margin: const EdgeInsets.only(top: 25, right: 25),
+                ),
+              )
+          ),
+          Align(
+              alignment: Alignment.center,
+              child:  SizedBox(
+                width: 260,
+                height: 260,
+                child: Container(
+                    decoration : BoxDecoration(
+                      border : Border.all(color: Colors.black),
+                      color: Colors.white,
+                    ),
+                  margin: const EdgeInsets.only(bottom: 25, left: 25),
+                ),
+              )
           ),
           Align(
             alignment: Alignment.center,
             child: Container(
-              child: Image.asset('assets/image/Apple.PNG'),
+              //margin: const EdgeInsets.only(top: 120),
+              width: 260,
+              height: 260,
+              child: TextButton(
+                onPressed: () {
+                },
+                child: Container(
+
+                  ),
+                ),
+              ),
+            ),
+          Align(
+            alignment: Alignment.center,
+            child:  Container(
+              width: 120,
+              height: 50,
+              margin: const EdgeInsets.only(bottom: 120, left: 25),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child:  Container(
+              width: 120,
+              height: 50,
+              margin: const EdgeInsets.only(top: 60, left: 25),
+              child: TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                ),
+              ),
             ),
           ),
         ],

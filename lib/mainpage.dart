@@ -57,7 +57,7 @@ class _MainPageState extends State<MainPage> {
           child: Align(
             alignment: Alignment.center,
             child: Text(
-              '학습',
+              '학습하기',
               style: TextStyle(
                 fontSize: 24
               ),
