@@ -10,9 +10,20 @@ class StudyPage extends StatefulWidget {
 
 }
 
+void main()
+{
+  var words = ['fee', 'fi', 'fo', 'fum'];
+  var map = words.asMap();
+
+  print(map[1]);
+}
+
 class _StudyPageState extends State<StudyPage> {
 
   @override
+  var words = ['apple', '사과', 'grape', '포도'];
+  final int i = 0;
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -69,30 +80,7 @@ class _StudyPageState extends State<StudyPage> {
       ),
       body: Stack(
         children: <Widget>[
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: Container(
-              height: 70,
-              width: 70,
-              margin: const EdgeInsets.only(bottom: 40, left: 20),
-              child: FloatingActionButton(
-                onPressed: () {},
-                child: Icon(Icons.navigate_before, size: 40,),
-              ),
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              height: 70,
-              width: 70,
-              margin: const EdgeInsets.only(bottom: 40, right: 20),
-              child: FloatingActionButton(
-                onPressed: () {},
-                child: Icon(Icons.navigate_next, size: 40,),
-              ),
-            ),
-          ),
+
           Align(
               alignment: Alignment.center,
               child:  SizedBox(
@@ -137,6 +125,34 @@ class _StudyPageState extends State<StudyPage> {
               ),
             ),
           Align(
+            alignment: Alignment.bottomLeft,
+            child: Container(
+              height: 70,
+              width: 70,
+              margin: const EdgeInsets.only(bottom: 40, left: 20),
+              child: FloatingActionButton(
+                onPressed: () {
+                  i - 2;
+                },
+                child: Icon(Icons.navigate_before, size: 40,),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              height: 70,
+              width: 70,
+              margin: const EdgeInsets.only(bottom: 40, right: 20),
+              child: FloatingActionButton(
+                onPressed: () {
+                  i + 2;
+                },
+                child: Icon(Icons.navigate_next, size: 40,),
+              ),
+            ),
+          ),
+          Align(
             alignment: Alignment.center,
             child:  Container(
               width: 120,
@@ -144,6 +160,7 @@ class _StudyPageState extends State<StudyPage> {
               margin: const EdgeInsets.only(bottom: 120, left: 25),
               child: TextField(
                 decoration: InputDecoration(
+                  labelText: words[i],
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -157,6 +174,7 @@ class _StudyPageState extends State<StudyPage> {
               margin: const EdgeInsets.only(top: 60, left: 25),
               child: TextField(
                 decoration: InputDecoration(
+                  labelText: words[i + 1],
                     border: OutlineInputBorder(),
                 ),
               ),
